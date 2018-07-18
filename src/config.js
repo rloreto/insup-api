@@ -52,7 +52,7 @@ const config = {
     ip: process.env.IP || undefined,
     port: process.env.PORT || 8080,
     mongo: {
-      uri: 'mongodb://' + userMongo + ':' + encodeURIComponent(pwdMongo) + '@ds129321.mlab.com:29321/instagram-stats'
+      uri: process.env.MONGODB_URI || 'mongodb://localhost/insup-api'
     }
   }
 }
